@@ -1,0 +1,213 @@
+/* ALL WEBSITE */
+.App {
+  text-align: center;
+}
+
+/* HEADER */
+
+.App-header{
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo{
+  height: 25px;
+  margin-right: 60%;
+}
+
+.Troller{
+  height: 25px;
+}
+
+/* BANNER */
+
+
+.Capa1{
+
+  background-image: url('./features/image/banner1.jpg');
+  background-position: left;
+  background-size: cover;
+  min-height: 500px;
+  box-shadow: 5px 5px 5px rgb(199, 198, 198);
+}
+
+.Capa2{
+
+  background-image: url('./features/image/banner2.jpg');
+  background-position: left;
+  background-size: cover;
+  min-height: 500px;
+  box-shadow: 5px 5px 5px rgb(199, 198, 198);
+}
+
+.Banner{
+  display: flex;
+  align-items: center;
+}
+
+.Icon{
+  height: 50px;
+}
+
+.Icon2{
+  height: 50px;
+  margin-left: 0.5%;
+}
+
+.Content{
+  margin-left: 55%;
+  width: 500px;
+}
+
+.Content h3 {
+  color: #ee8604;
+  font-size: 25px;
+}
+
+.Content h4 {
+  font-size: 30px;
+}
+
+.Content p {
+  font-size: 15px;
+  color: rgb(143, 143, 143);
+}
+
+.Content button{
+  background-color: #ee8604;
+  border: none;
+  padding: 15px;
+  color: white;
+  margin-top: 35px;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+.AnimatedTitle {
+  animation: slideIn 1s ease-in-out;
+}
+
+
+/* TREND */
+
+.Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container h1{
+  font-size: 40px;
+}
+
+.Container button{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px;
+  margin: 10px;
+}
+
+.Container button:hover{
+  font-weight: bold;
+  background-color: #ee8604;
+  color: white;
+}
+
+.Container button:active{
+  border: #ee8604;
+}
+
+/* BOOKS */
+
+.Container-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Books{
+  margin-right: 70px;
+}
+
+.Books img{
+  height: 250px;
+  margin-top: 25px;
+  box-shadow: 5px 5px 5px rgb(199, 198, 198);
+}
+
+.Books h6{
+  font-size: 15px;
+  margin: 5px;
+  margin-left: 0px;
+}
+
+.Books p{
+  margin-top: 5px;
+  color: #ee8604;
+}
+
+.Add{
+  color: white;
+  background-color: #ee8604;
+  border: none;
+  padding: 15px;
+}
+
+.Add:hover{
+  color: black;
+}
+
+
+/*Footer*/
+
+.Rodape{
+  background-color: #f3f2ed;
+  margin-top: 35px;
+}
+
+.Content-footer{
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(143, 143, 143);
+}
+
+.Content-footer h5{
+  color:#ee8604;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.Content-footer h6{
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Content-footer h6:hover{
+  color: #ee8604;
+}
+
+
+/*Fonts*/
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./features/font/Montserrat/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+  /* Adicione outros formatos de fonte, se necessário */
+}
