@@ -1,42 +1,26 @@
 import React from "react";
 import '../../App.css';
-import { useSelector, useDispatch } from "react-redux";
+import { CartContent } from "./cartContent";
+import { useState } from 'react';
 
 export const Cart = () => {
+    const [showCart, setShowCart] = useState(true);
 
-    const product = useSelector((state) => state.cartReducer.products)
-    const dispatch = useDispatch();
-
-    const handleDeleteClick = (item) => {
-        dispatch({
-            type:'delete',
-            payload: item.id,
-        })
-    }
-
-    console.log(product);
-
-    const displayCart = product.map(item => {
-        return(
-            <div className="Cart-display">
-                <img src={item.src} alt={item.title}></img>
-                <div className="Cart-content">
-                    <p>{item.title}</p>
-                  <h6>{item.price}</h6>    
-                  <p>{item.id}</p>
-                </div>
-                <button onClick={handleDeleteClick.bind(null,item)}>Delete</button>
+    const handleCartClose = () => {
+      setShowCart(false);
+    };
+  
+    return (
+      <div>
+        {showCart && (
+          <div className="Cart">
+            <div className="Flex">
+              <h2>Basket</h2>
+              <button className="Close" onClick={handleCartClose}></button>
             </div>
-        )
-        
-    })
-    
-    console.log(product);
-
-    return(
-        <div className="Cart">
-            <h2>Basket</h2>
-            {displayCart}
-        </div>
-    )
-}
+            <CartContent />
+          </div>
+        )}
+      </div>
+    );
+};

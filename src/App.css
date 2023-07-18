@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.Flex{
+  display: flex;
+ }
+
 /* HEADER */
 
 .App-header{
@@ -21,6 +25,15 @@
 
 .Troller{
   height: 25px;
+}
+
+.App-header button{
+  background-color: white;
+  border: none;
+}
+
+.App-header button img:hover{
+  content: url(./features/image/carrinhohover.png);
 }
 
 /* BANNER */
@@ -56,6 +69,14 @@
 .Icon2{
   height: 50px;
   margin-left: 0.5%;
+}
+
+.Icon:hover{
+  content: url(./features/image/nexthover.png);
+}
+
+.Icon2:hover{
+  content: url(./features/image/backhover.png);
 }
 
 .Content{
@@ -258,6 +279,30 @@
   font-size: 15px;
   margin-top: 0;
  }
+
+ .Close{
+    background-image: url(./features/image/x.png);
+    background-size: cover;
+    background-position: center;
+    height: 20px;
+    width: 20px;
+    margin-top: 35px;
+    margin-left: 60%;
+ }
+
+ .Close:hover{
+  height: 15px;
+  width: 15px;
+ }
+
+ .Total h3{
+  margin-top: 35px;
+  margin-left: 60%;
+ }
+
+
+
+
 
 
 
