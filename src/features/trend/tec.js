@@ -1,58 +1,76 @@
 import React from "react";
-import Book1 from '../image/books/book1.png';
-import Book2 from '../image/books/books2.jpg';
-import Book3 from '../image/books/book3.jpg';
-import Book4 from '../image/books/book4.jpg';
-import Book5 from '../image/books/book5.jpg';
-import Book6 from '../image/books/book6.jpg';
-import Book7 from '../image/books/book7.jpg';
-import Book8 from '../image/books/book8.jpeg';
-import Book9 from '../image/books/book9.jpg';
-import Book10 from '../image/books/book10.jpeg';
+import { bookImages } from "../image/books/book";
+import { useSelector, useDispatch } from "react-redux";
 
 export const Tec = () => {
+     /* DISPLAY BOOKS */
+
     const details = [
-        {src: Book8, 
+        {src: bookImages.book8, 
             title: 'Pride and Prejudice',
-            price: '£ 12.00'
+            price: '£ 12.00',
+            id:31
            }, 
-        {src: Book3, 
+        {src: bookImages.book3, 
             title: 'The Fault in Our Stars',
-            price: '£ 7.30'
+            price: '£ 7.30',
+            id:32
            },   
-        {src: Book7, 
+        {src: bookImages.book7, 
             title: 'The Lord of the Rings',
-            price: '£ 5.90'
+            price: '£ 5.90',
+            id:33
         },    
-        {src: Book1, 
+        {src: bookImages.book1, 
          title: 'The girl on the train',
-         price: '£ 5.20'
+         price: '£ 5.20',
+         id:34
         },
-        {src: Book6, 
+        {src: bookImages.book6, 
             title: 'Fifty Shades of Grey',
-            price: '£ 7.99'
+            price: '£ 7.99',
+            id:35
            }, 
-        {src: Book2, 
+        {src: bookImages.book2, 
             title: 'The hunger games',
-            price: '£ 4.50'
+            price: '£ 4.50',
+            id:36
            },
-        {src: Book4, 
+        {src: bookImages.book4, 
             title: 'Harry Potter',
-            price: '£ 3.90'
+            price: '£ 3.90',
+            id:37
            },   
-        {src: Book10, 
+        {src: bookImages.book10, 
             title: 'The Book Thief',
-            price: '£ 5.90'
+            price: '£ 5.90',
+            id:38
         },    
-        {src: Book5, 
+        {src: bookImages.book5, 
             title: 'The Da Vinci Code',
-            price: '£ 6.50'
+            price: '£ 6.50',
+            id:39
            }, 
-        {src: Book9, 
+        {src: bookImages.book9, 
             title: '1984',
-            price: '£ 9.99'
+            price: '£ 9.99',
+            id: 40
            }, 
     ];
+
+    /*BUTTON*/
+
+    const dispatch = useDispatch();
+    const products = useSelector((state) => state.cartReducer.products);
+
+    const handleOnClick = (item) =>{
+        dispatch({
+            type: 'add',
+            payload: item,
+        })
+    }
+
+    console.log(products);
 
     const displaybooks = details.map(item => {
         return(
@@ -60,7 +78,7 @@ export const Tec = () => {
             <img src={item.src} alt={item.title}></img>
             <h6>{item.title}</h6>
             <p>{item.title}</p>
-            <button className="Add">Add to cart</button>
+            <button className="Add" onClick={handleOnClick.bind(null,item)}>Add to cart</button>
         </div>
         )
     })

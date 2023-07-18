@@ -1,3 +1,5 @@
 import { createStore } from 'redux';
-import counterReducer from '../features/counter/counterSlice';
+import { rootReducer } from './Redux/rootreducer';
 
+
+export const store = createStore(rootReducer);

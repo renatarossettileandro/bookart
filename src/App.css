@@ -204,6 +204,66 @@
   color: #ee8604;
 }
 
+ /* BASKET */
+
+ .Cart{
+  background-color: white;
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  min-height: 600px;
+  box-shadow: 2px 2px 5px 2px #bdbcbb;
+ }
+
+ .Cart h2{
+  color: #ee8604;
+  margin: 25px;
+  margin-left: 30px;
+ }
+
+ .Cart-display{
+  display: flex;
+  border-bottom: solid 2px #f3f2ed;
+  margin-bottom: 10px;
+ }
+
+ .Cart-display button{
+  height: 50px;
+  margin-left: 50px;
+  margin-top: 25px;
+  color: white;
+  background-color: #ee8604;
+  border: none;
+  padding: 15px;
+}
+
+.Cart-display button:hover{
+  color: black;
+}
+
+ .Cart-display img{
+  height: 100px;
+  margin-left: 30px;
+ }
+
+ .Cart-content{
+  margin-left: 50px;
+  max-width: 200px;
+  min-width: 200px;
+ }
+ 
+ .Cart-content h6{
+  color: rgb(143, 143, 143);
+  font-size: 15px;
+  margin-top: 0;
+ }
+
+
+
+
+ 
+
 
 /*Fonts*/
 @font-face {
