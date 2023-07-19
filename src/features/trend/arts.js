@@ -5,56 +5,16 @@ import { useDispatch, useSelector } from "react-redux";
 export const Arts = () => {
  /* DISPLAY BOOKS */
  const details = [
-    {src: bookImages.book6, 
-        title: 'Fifty Shades of Grey',
-        price: 7.99,
-        id: 11
-       }, 
-    {src: bookImages.book7, 
-        title: 'The Lord of the Rings',
-        price: 5.90,
-        id:12
-       }, 
-    {src: bookImages.book8, 
-        title: 'Pride and Prejudice',
-        price: 12.00,
-        id:13
-       }, 
-    {src: bookImages.book9, 
-        title: '1984',
-        price: 9.99,
-        id:14
-       }, 
-    {src: bookImages.book10, 
-        title: 'The Book Thief',
-        price: 5.90,
-        id:15
-       }, 
-    {src: bookImages.book1, 
-        title: 'The girl on the train',
-        price: 5.20,
-        id:16
-       },
-    {src: bookImages.book2, 
-           title: 'The hunger games',
-           price: 4.50,
-           id:17
-          },
-    {src: bookImages.book3, 
-           title: 'The Fault in Our Stars',
-           price: 7.30,
-           id:18
-          },   
-    {src: bookImages.book4, 
-           title: 'Harry Potter',
-           price: 3.90,
-           id:19
-          },   
-    {src: bookImages.book5, 
-           title: 'The Da Vinci Code',
-           price: 6.50,
-           id:20
-          },   
+    {src: bookImages.book6, title: 'The Secret Race', price: 7.99, id:16}, 
+    {src: bookImages.book7, title: 'Friday Night Lights', price: 5.90, id:17}, 
+    {src: bookImages.book8, title: 'Seabiscuit', price: 12.00, id:18}, 
+    {src: bookImages.book9, title: 'The Yankee Years', price: 9.99, id:19}, 
+    {src: bookImages.book10, title: 'The Boys of Summer', price: 5.90, id:20}, 
+    {src: bookImages.book1, title: 'Moneyball', price: 5.21, id:11},
+    {src: bookImages.book2, title: 'The Boys in the Boat', price: 4.50, id:12},
+    {src: bookImages.book3, title: 'Open', price: 7.30, id:13},   
+    {src: bookImages.book4, title: 'The Blind Side', price: 3.90, id:14},   
+    {src: bookImages.book5, title: 'The Miracle of Castel Di Sangro', price: 6.50, id:15},
 ];
 
 /*BUTTON*/
@@ -63,10 +23,13 @@ export const Arts = () => {
     const products = useSelector((state) => state.cartReducer.products);
 
     const handleOnClick = (item) => {
-        dispatch({
-            type:'add',
+        const itemExists = products.some((existingItem) => existingItem.id === item.id);
+        if (!itemExists) {
+            dispatch({
+            type: 'add',
             payload: item,
-        })
+            });
+        };
     }
 
     console.log(products);

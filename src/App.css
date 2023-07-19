@@ -20,7 +20,7 @@
 
 .Logo{
   height: 25px;
-  margin-right: 60%;
+  margin-right: 50%;
 }
 
 .Troller{
@@ -32,9 +32,26 @@
   border: none;
 }
 
-.App-header button img:hover{
+.ButtonTroller .Troller:hover {
   content: url(./features/image/carrinhohover.png);
 }
+
+.Formulario{
+  border-radius: 50px;
+  border: solid 1px #bdbcbb;
+  height: 30px;
+  width: 350px;
+  margin-left: -110%;
+}
+
+.Form button{
+  margin-right: -60px;
+}
+
+.Form button:hover{
+  color:#ee8604;
+}
+
 
 /* BANNER */
 
@@ -225,12 +242,14 @@
   color: #ee8604;
 }
 
+
  /* BASKET */
 
  .Cart{
   background-color: white;
   width: 500px;
   position: absolute;
+  z-index: 2;
   top: 100px;
   right: 0;
   min-height: 600px;
@@ -266,6 +285,7 @@
  .Cart-display img{
   height: 100px;
   margin-left: 30px;
+  margin-top: 15px;
  }
 
  .Cart-content{
@@ -300,7 +320,95 @@
   margin-left: 60%;
  }
 
+ /*Counter*/
 
+ .Counter{
+  margin-left: -12px;
+  margin-top: -20px;
+ }
+
+ .Counter button{
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+  margin-top: 0;
+  color: white;
+  background-color: #ee8604;
+  border: none;
+  padding: 0px;
+}
+
+.Counter p{
+  margin-top: 0;
+}
+
+
+/*SEARCH*/
+
+.Search {
+  min-height: 0; 
+  height: 100%;
+  width: 80%;
+  background-color: #f3f2ed;
+  position: absolute;
+  z-index: 1;
+  top: 62.5%;
+  left: 50%;
+  box-shadow: 2px 2px 5px 2px #bdbcbb;
+  transform: translate(-50%, -50%);
+  display: flex; 
+  flex-direction: column;
+}
+
+.Search .Container-wrap {
+  flex-grow: 1; 
+  overflow-y: auto; 
+}
+
+.Search .Shut {
+  margin-top: auto; 
+}
+
+.Search h1{
+  margin: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  color: #ee8604;
+}
+
+
+.Search .Shut{
+  background: none;
+  margin-left: 70%;
+  position: absolute;
+  z-index: 2;
+  margin-top: 2%;
+  margin-left: 95%;
+}
+
+.Shut img{
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  margin-left: 150;
+  background-color: none;
+}
+
+.Search .Shut img:hover{
+  height: 15px;
+  width: 15px;
+}
+
+.Search .Add{
+  color: white;
+  background-color: #ee8604;
+  border: none;
+  padding: 15px;
+}
+
+.Search .Add:hover{
+  color: black;
+}
 
 
 

@@ -1,65 +1,66 @@
-import React from "react";
-import '../../App.css';
+import React, { useState } from "react";
+import "../../App.css";
 import { useSelector, useDispatch } from "react-redux";
+import { Counter } from "../counter/counter";
 
-export const CartContent = () =>{
-   /*DELETE*/
-   
-    const product = useSelector((state) => state.cartReducer.products)
-    const dispatch = useDispatch();
-    
+export const CartContent = () => {
+  const products = useSelector((state) => state.cartReducer.products);
+  const dispatch = useDispatch();
 
-    const handleDeleteClick = (item) => {
-        dispatch({
-            type:'delete',
-            payload: item.id,
-        })
-    }
+  const handleDeleteClick = (item) => {
+    dispatch({
+      type: "delete",
+      payload: item.id,
+    });
+  };
 
-    console.log(product);
+  const [quantity, setQuantity] = useState({}); 
 
-    const displayCart = product.map(item => {
-        return(
-            <div className="Cart-display">
-                <img src={item.src} alt={item.title}></img>
-                <div className="Cart-content">
-                    <p>{item.title}</p>
-                  <h6>{item.price}</h6>   
-                  <p>{item.id}</p>
-                </div>
-                <button onClick={handleDeleteClick.bind(null,item)}>Delete</button>
-            </div>
-        )
-        
-    })
-    
-    console.log(product);
+  const handleQuantityChange = (id, newQuantity) => {
+    setQuantity((prevState) => ({
+      ...prevState,
+      [id]: newQuantity,
+    })); 
+  };
 
-   /*TOTAL PRICE*/
+  const displayCart = products.map((item) => {
+    const itemQuantity = quantity[item.id] || 1; 
 
-   const price = () => {
-        let totalPrice = 0.00;
-        product.forEach(item => {
-            totalPrice += item.price;
-        });
-        return totalPrice;
-    };
-   
-
-    return(
-        <div>
-            {displayCart}
-            <div className="Flex Total">
-                <h2>Total:</h2>
-                <h3>£{price()}</h3>
-            </div>
+    return (
+      <div className="Cart-display" key={item.id}>
+        <img src={item.src} alt={item.title} />
+        <div className="Cart-content">
+          <p>{item.title}</p>
+          <h6>{item.price}</h6>
+          <Counter
+            id={item.id} 
+            unit={itemQuantity}
+            onQuantityChange={handleQuantityChange}
+          />
         </div>
-    )
-}
+        <button onClick={() => handleDeleteClick(item)} className="Button-delete">
+          Delete
+        </button>
+      </div>
+    );
+  });
 
+  const calculateTotalPrice = () => {
+    let totalPrice = 0.0;
+    products.forEach((item) => {
+      const itemQuantity = quantity[item.id] || 1; 
+      totalPrice += item.price * itemQuantity;
+    });
+    return totalPrice;
+  };
 
-
-
-
-
-
+  return (
+    <div>
+      {displayCart}
+      <div className="Flex Total">
+        <h2>Total:</h2>
+        <h3>£{calculateTotalPrice()}</h3>
+      </div>
+    </div>
+  );
+};

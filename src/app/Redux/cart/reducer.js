@@ -19,6 +19,16 @@ export const cartReducer = (state=initialState, action) => {
                 }
             }
 
+            case 'counter':{
+                return {
+                    ...state,
+                    products:{
+                        ...state,
+                        counter: action.payload
+                    }
+                }
+            }
+
         default: return state
    
     }
