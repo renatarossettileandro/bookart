@@ -67,8 +67,11 @@ export const Header = () => {
             <button  onClick={handleOnClick} className="ButtonTroller">
                 <img src={troller} className="Troller" alt='basket'></img>
             </button>
-            {ativoCart && <Cart />}
-            {ativoResult &&<Result searchTerm={searchTerm}/>}
+            <div  className="Basket">
+                {ativoCart && <Cart />}
+                {ativoResult &&<Result searchTerm={searchTerm}/>}
+            </div>
+
         </div>
     )
 }

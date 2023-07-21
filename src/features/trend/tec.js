@@ -7,7 +7,7 @@ export const Tec = () => {
 
     const details = [
         {src: bookImages.book8, title: 'Seabiscuit', price: 12.00, id:38}, 
-        {src: bookImages.book5, title: 'The Miracle of Castel Di Sangro', price: 6.50, id:35},
+        {src: bookImages.book5, title: 'The Miracle of Castel', price: 6.50, id:35},
         {src: bookImages.book2, title: 'The Boys in the Boat', price: 4.50, id:32},
         {src: bookImages.book6, title: 'The Secret Race', price: 7.99, id:36}, 
         {src: bookImages.book4, title: 'The Blind Side', price: 3.90, id:34}, 

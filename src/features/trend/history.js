@@ -8,7 +8,7 @@ export const History = () => {
         {src: bookImages.book3, title: 'Open', price: 7.30, id:23},   
         {src: bookImages.book9, title: 'The Yankee Years', price: 9.99, id:29},
         {src: bookImages.book4, title: 'The Blind Side', price: 3.90, id:24},   
-        {src: bookImages.book5, title: 'The Miracle of Castel Di Sangro', price: 6.50, id:25}, 
+        {src: bookImages.book5, title: 'The Miracle of Castel', price: 6.50, id:25}, 
         {src: bookImages.book1, title: 'Moneyball', price: 5.21, id:21},
         {src: bookImages.book6, title: 'The Secret Race', price: 7.99, id:26}, 
         {src: bookImages.book2, title: 'The Boys in the Boat', price: 4.50, id:22},

@@ -14,7 +14,7 @@ export const Arts = () => {
     {src: bookImages.book2, title: 'The Boys in the Boat', price: 4.50, id:12},
     {src: bookImages.book3, title: 'Open', price: 7.30, id:13},   
     {src: bookImages.book4, title: 'The Blind Side', price: 3.90, id:14},   
-    {src: bookImages.book5, title: 'The Miracle of Castel Di Sangro', price: 6.50, id:15},
+    {src: bookImages.book5, title: 'The Miracle of Castel', price: 6.50, id:15},
 ];
 
 /*BUTTON*/
@@ -40,17 +40,17 @@ export const Arts = () => {
             <img src={item.src} alt={item.title}></img>
             <h6>{item.title}</h6>
             <p>{'£'+item.price}</p>
-            <button className="Add" onClick={handleOnClick.bind(null, item)}>Add to cart</button>
+            <button className="Add" onClick={handleOnClick.bind(null,item)}>Add to cart</button>
         </div>
         )
     })
+
+
     return(
         <div>
-        <div className="Container-wrap">
-            {displaybooks}
-        </div>
-        
-    
+            <div className="Container-wrap">
+                {displaybooks}
+            </div>
         </div>
     )
 }

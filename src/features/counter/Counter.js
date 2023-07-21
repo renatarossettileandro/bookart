@@ -15,7 +15,7 @@ export const Counter = (props) => {
 
   return (
     <div className="Counter Flex">
-      <button className="Soma" onClick={handleMinus}>
+      <button className="Menos" onClick={handleMinus}>
         -
       </button>
       <p>{unit}</p>

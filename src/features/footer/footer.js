@@ -4,7 +4,7 @@ import Logo from '../image/logo.png';
 
 export const Footer = () => {
     return(
-        <div className="Container Rodape">
+        <div className="Container-Rodape Rodape">
             <div className="Content-footer">
                 <img src={Logo} alt='logo'></img>
             </div>
