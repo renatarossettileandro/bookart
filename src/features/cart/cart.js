@@ -14,7 +14,7 @@ export const Cart = () => {
       <div>
         {showCart && (
           <div className="Cart">
-            <div className="Flex">
+            <div className="Flex-cart">
               <h2>Basket</h2>
               <button className="Close" onClick={handleCartClose}></button>
             </div>

@@ -1,8 +1,5 @@
 .Flex{
   display: flex; 
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
  }
  
  /* HEADER */
@@ -265,7 +262,7 @@
    width: 55%;
    position: absolute;
    z-index: 2;
-   top: 7.4%;
+   top: 12%;
    right: 0;
    min-height: 600px;
    box-shadow: 2px 2px 5px 2px #bdbcbb;
@@ -315,6 +312,12 @@
    margin-top: 0;
   }
  
+  .Flex-cart{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+   } 
  
   .Close{
      background-image: url(./features/image/x.png);
