@@ -51,7 +51,9 @@ export const CartContent = () => {
       const itemQuantity = quantity[item.id] || 1; 
       totalPrice += item.price * itemQuantity;
     });
-    return totalPrice;
+    const totalPriceComDuasCasasDecimais = totalPrice.toFixed(2);
+
+    return parseFloat(totalPriceComDuasCasasDecimais);
   };
 
   return (
